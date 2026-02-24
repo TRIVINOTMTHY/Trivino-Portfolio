@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Dainiel Timothy S. Triviño — Web Developer Portfolio. Showcasing front-end development projects and skills.">
+  <meta name="keywords" content="Web Developer, HTML, CSS, JavaScript, Portfolio, Dainiel Timothy Triviño">
+  <meta name="author" content="Dainiel Timothy S. Triviño">
+  <title>Dainiel Timothy Triviño | Portfolio</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* ═══════════════════════════════════════════
+       MOBILE HERO — Clean side-by-side layout
+       Photo right, text left, properly aligned
+    ═══════════════════════════════════════════ */
+    @media (max-width: 768px) {
+
+      /* Hero section fills viewport height cleanly */
+      .hero {
+        min-height: 100svh !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+      }
+
+      /* Row layout: text left | photo right */
+      .hero-content {
+        display: grid !important;
+        grid-template-columns: 1fr 120px !important;
+        align-items: start !important;
+        gap: 20px !important;
+        padding: 80px 20px 40px !important;
+        width: 100% !important;
+      }
+
+      /* ── Left: Text column ── */
+      .hero-text {
+        grid-column: 1 !important;
+        text-align: left !important;
+        padding: 0 !important;
+        min-width: 0 !important;
+      }
+
+      .hero-eyebrow {
+        justify-content: flex-start !important;
+        font-size: 0.62rem !important;
+        margin-bottom: 10px !important;
+        flex-wrap: wrap !important;
+        gap: 4px !important;
+      }
+
+      .hero-title {
+        font-size: clamp(1.7rem, 8vw, 2.4rem) !important;
+        line-height: 1.1 !important;
+        margin-bottom: 14px !important;
+      }
+
+      .hero-desc {
+        font-size: 0.8rem !important;
+        line-height: 1.55 !important;
+        margin-bottom: 20px !important;
+      }
+
+      .hero-actions {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 10px !important;
+        align-items: stretch !important;
+      }
+
+      .hero-actions .btn {
+        width: 100% !important;
+        justify-content: center !important;
+        font-size: 0.8rem !important;
+        padding: 11px 14px !important;
+      }
+
+      /* ── Right: Photo column ── */
+      .hero-visual {
+        grid-column: 2 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        padding-top: 4px !important;
+      }
+
+      .hero-image-frame {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        position: static !important;
+        width: 110px !important;
+        height: auto !important;
+        overflow: visible !important;
+      }
+
+      .hero-image {
+        display: block !important;
+        width: 110px !important;
+        height: 110px !important;
+        object-fit: cover !important;
+        border-radius: 50% !important;
+        border: 2px solid #8b0000 !important;
+        position: static !important;
+        z-index: 1 !important;
+      }
+
+      .hero-image-placeholder {
+        width: 110px !important;
+        height: 110px !important;
+        border-radius: 50% !important;
+      }
+
+      /* Stats stacked neatly under photo */
+      .hero-stats {
+        position: static !important;
+        transform: none !important;
+        top: auto !important; left: auto !important;
+        right: auto !important; bottom: auto !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 8px !important;
+        width: 110px !important;
+        margin-top: 14px !important;
+        padding: 0 !important;
+        background: transparent !important;
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+        border: none !important;
+        box-shadow: none !important;
+      }
+
+      .stat-item {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 1px !important;
+        line-height: 1.2 !important;
+      }
+
+      .stat-number {
+        font-size: 1.1rem !important;
+        line-height: 1 !important;
+      }
+
+      .stat-label {
+        font-size: 0.52rem !important;
+        letter-spacing: 0.06em !important;
+        text-align: center !important;
+        white-space: nowrap !important;
+      }
+
+      /* Hide scroll indicator on mobile */
+      .scroll-indicator {
+        display: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- LOADER -->
+  <div class="loader" id="loader">
+    <div class="loader-logo">DT</div>
+    <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+  </div>
+
+  <!-- NAVIGATION -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <img src="images/logo.png" alt="Dainiel Triviño" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+        <span style="display:none">D<span>T</span></span>
+      </a>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html" class="nav-link active"><span class="nav-number">01.</span> Home</a></li>
+        <li><a href="about.html" class="nav-link"><span class="nav-number">02.</span> About</a></li>
+        <li><a href="projects.html" class="nav-link"><span class="nav-number">03.</span> Projects</a></li>
+        <li><a href="contact.html" class="nav-link"><span class="nav-number">04.</span> Contact</a></li>
+      </ul>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg">
+      <div class="hero-grid-lines"></div>
+      <div class="hero-orb hero-orb-1"></div>
+      <div class="hero-orb hero-orb-2"></div>
+    </div>
+
+    <div class="hero-content">
+      <!-- Text -->
+      <div class="hero-text">
+        <div class="hero-eyebrow">
+          <div class="hero-eyebrow-line"></div>
+          <span>Web Developer · Philippines</span>
+        </div>
+        <h1 class="hero-title">
+          Dainiel<br><em>Timothy</em><br>Triviño
+        </h1>
+        <p class="hero-desc">
+          I craft <strong style="color:var(--text-primary)">responsive, modern web experiences</strong> — 
+          blending clean code with thoughtful UI design. Currently a 3rd-year BSIT student 
+          at Holy Angel University.
+        </p>
+        <div class="hero-actions">
+          <a href="projects.html" class="btn btn-primary">
+            <i class="fas fa-code"></i> View My Work
+          </a>
+          <a href="contact.html" class="btn btn-outline">
+            <i class="fas fa-paper-plane"></i> Get In Touch
+          </a>
+        </div>
+      </div>
+
+      <!-- Visual -->
+      <div class="hero-visual">
+        <div class="hero-image-frame">
+          <img src="images/profile.jpg" alt="Dainiel Timothy S. Triviño" class="hero-image"
+               onerror="this.style.display='none'; document.querySelector('.hero-image-placeholder').style.display='flex'">
+          <div class="hero-image-placeholder" style="display:none">
+            <i class="fas fa-user"></i>
+            <span>profile.jpg</span>
+          </div>
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-number" data-count="4" data-suffix="+">0+</span>
+              <span class="stat-label">Projects</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" data-count="3" data-suffix="rd">0</span>
+              <span class="stat-label">Year Student</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" data-count="90" data-suffix="%">0%</span>
+              <span class="stat-label">HTML/CSS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-indicator">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- HIGHLIGHTS -->
+  <section class="section highlights-section">
+    <div class="container">
+      <div class="section-header" style="text-align:center">
+        <div class="section-tag" style="justify-content:center">What I Do</div>
+        <h2 class="section-title">Building the web,<br><em>one pixel at a time</em></h2>
+        <p class="section-subtitle" style="margin:16px auto 0">
+          From concept to deployment, I focus on creating web experiences that are 
+          both beautiful and functional.
+        </p>
+      </div>
+
+      <div class="highlights-grid">
+        <div class="highlight-card reveal">
+          <div class="highlight-number">01</div>
+          <div class="highlight-icon"><i class="fas fa-laptop-code"></i></div>
+          <h3>Web Development</h3>
+          <p>Building responsive, accessible websites using modern HTML, CSS, and JavaScript techniques with performance in mind.</p>
+        </div>
+
+        <div class="highlight-card reveal delay-200">
+          <div class="highlight-number">02</div>
+          <div class="highlight-icon"><i class="fas fa-mobile-alt"></i></div>
+          <h3>Responsive Design</h3>
+          <p>Every layout I build works seamlessly from a 320px phone to a 4K monitor — mobile-first by default.</p>
+        </div>
+
+        <div class="highlight-card reveal delay-400">
+          <div class="highlight-number">03</div>
+          <div class="highlight-icon"><i class="fas fa-palette"></i></div>
+          <h3>UI/UX Design</h3>
+          <p>Bridging the gap between design and code with Figma prototypes and user-centered interface decisions.</p>
+        </div>
+      </div>
+
+      <div style="text-align:center; margin-top:48px;" class="reveal">
+        <a href="about.html" class="btn btn-outline">
+          <i class="fas fa-arrow-right"></i> Learn More About Me
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-brand-name">Dainiel Timothy <span>Triviño</span></div>
+          <p>Web Developer passionate about creating beautiful and functional web experiences based in Pampanga, Philippines.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <div class="footer-social">
+            <a href="https://www.linkedin.com/in/dainiel-timothy-trivino-508b88357/" class="footer-social-icon" aria-label="LinkedIn" target="_blank">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/TRIVINOTMTHY" class="footer-social-icon" aria-label="GitHub" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.facebook.com/danieltimothy.trivino/" class="footer-social-icon" aria-label="Facebook" target="_blank">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="mailto:trivinodainieltimothy@gmail.com" class="footer-social-icon" aria-label="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Dainiel Timothy S. Triviño. All rights reserved.</p>
+        <div class="footer-bottom-right">
+          Built with <span>♥</span> &amp; HTML / CSS / JS
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

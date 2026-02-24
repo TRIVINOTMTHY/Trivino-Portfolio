@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Web Development Projects by Dainiel Timothy S. Triviño — Portfolio of websites and UI designs.">
+  <title>Projects | Dainiel Triviño</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- LOADER -->
+  <div class="loader" id="loader">
+    <div class="loader-logo">DT</div>
+    <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+  </div>
+
+  <!-- NAVIGATION -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <img src="images/logo.png" alt="Dainiel Triviño" class="logo-img"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+        <span style="display:none">D<span>T</span></span>
+      </a>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html" class="nav-link"><span class="nav-number">01.</span> Home</a></li>
+        <li><a href="about.html" class="nav-link"><span class="nav-number">02.</span> About</a></li>
+        <li><a href="projects.html" class="nav-link active"><span class="nav-number">03.</span> Projects</a></li>
+        <li><a href="contact.html" class="nav-link"><span class="nav-number">04.</span> Contact</a></li>
+      </ul>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <section class="page-header">
+    <div class="page-header-bg"></div>
+    <div class="page-header-inner">
+      <span class="page-header-eyebrow">03 — My Work</span>
+      <h1>Selected<br><em>Projects</em></h1>
+      <p>A collection of web development projects and UI designs I've crafted with care.</p>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section projects-section">
+    <div class="container">
+
+      <!-- Filter -->
+      <div class="projects-filter reveal">
+        <button class="filter-btn active" data-filter="all">All Work</button>
+        <button class="filter-btn" data-filter="web">Web Dev</button>
+        <button class="filter-btn" data-filter="design">UI Design</button>
+        <button class="filter-btn" data-filter="wordpress">WordPress</button>
+        
+      </div>
+
+      <!-- Grid -->
+      <div class="projects-grid">
+
+        <!-- Project 1 -->
+        <div class="project-card reveal" data-category="web">
+          <div class="project-img-wrap">
+            <img src="images/crave.png" alt="Click Crave — Online Food Ordering"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+            <div class="project-img-placeholder" style="display:none"><i class="fas fa-utensils"></i></div>
+            <div class="project-img-overlay"></div>
+            <span class="project-badge">Live Site</span>
+            <span class="project-year-tag">2023</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Click Crave — Online Food Ordering</h3>
+            <p class="project-desc">
+              An interactive food ordering platform featuring menu browsing, cart functionality, 
+              and real-time updates. Built with a mobile-first responsive approach for seamless 
+              ordering on any device.
+            </p>
+            <div class="project-tech">
+              <span class="tech-chip">HTML5</span>
+              <span class="tech-chip">CSS3</span>
+              <span class="tech-chip">JavaScript</span>
+            </div>
+            <div class="project-features">
+              <h4>Key Features</h4>
+              <ul>
+                <li>Interactive menu with categories & search</li>
+                <li>Shopping cart with live quantity updates</li>
+                <li>Fully responsive across all screen sizes</li>
+                <li>Mobile-first design philosophy</li>
+              </ul>
+            </div>
+            <div class="project-links">
+              <a href="https://trivinotmthy.github.io/Click-Crave/" class="btn btn-primary btn-sm" target="_blank">
+                <i class="fas fa-external-link-alt"></i> View Live
+              </a>
+              <a href="#" class="btn btn-outline btn-sm">
+                <i class="fab fa-github"></i> Source Code
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+         <div class="project-card reveal delay-300" data-category="web,wordpress">
+  <div class="project-img-wrap">
+    <img src="images/tambay.png" alt="Tambay ni Senpai WordPress Website"
+         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+    <div class="project-img-placeholder" style="display:none">
+      <i class="fab fa-wordpress"></i>
+    </div>
+    <div class="project-img-overlay"></div>
+    <span class="project-badge">Live Site</span>
+    <span class="project-year-tag">2026</span>
+  </div>
+
+  <div class="project-body">
+    <h3 class="project-title">Tambay ni Senpai — WordPress Blog</h3>
+    <p class="project-desc">
+      A fully customized WordPress anime blog platform featuring a clean layout, 
+      structured navigation, and engaging content sections. Designed to deliver 
+      anime reviews, recommendations, and news with a modern Pinoy-inspired theme.
+    </p>
+
+    <div class="project-tech">
+      <span class="tech-chip">WordPress</span>
+    </div>
+
+    <div class="project-features">
+      <h4>Key Features</h4>
+      <ul>
+        <li>Custom homepage layout</li>
+        <li>Responsive design for all devices</li>
+        <li>SEO-ready blog structure</li>
+        <li>Navigation menu with active state</li>
+        <li>Optimized media and content sections</li>
+      </ul>
+    </div>
+
+    <div class="project-links">
+      <a href="https://trivinotimothytambay.wordpress.com" class="btn btn-primary btn-sm" target="_blank">
+        <i class="fas fa-external-link-alt"></i> View Live
+      </a>
+      <a href="#" class="btn btn-outline btn-sm">
+        <i class="fab fa-wordpress"></i> WordPress Project
+      </a>
+    </div>
+  </div>
+</div>
+        
+
+        
+         <!-- Project 3 -->
+        <div class="project-card reveal" data-category="web">
+          <div class="project-img-wrap">
+            <img src="images/wonder.png" alt="WonderVault Game Collection Platform"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+            <div class="project-img-placeholder" style="display:none"><i class="fas fa-gamepad"></i></div>
+            <div class="project-img-overlay"></div>
+            <span class="project-badge">Live Site</span>
+            <span class="project-year-tag">2025</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">WonderVault — Game Collection Platform</h3>
+            <p class="project-desc">
+              A dynamic web application for discovering and exploring video games. Features real-time 
+              game data integration, advanced search and filtering capabilities, and a modern card-based 
+              interface for browsing gaming content across multiple platforms and genres.
+            </p>
+            <div class="project-tech">
+              <span class="tech-chip">HTML5</span>
+              <span class="tech-chip">CSS3</span>
+              <span class="tech-chip">JavaScript</span>
+              <span class="tech-chip">API Integration</span>
+            </div>
+            <div class="project-features">
+              <h4>Key Features</h4>
+              <ul>
+                <li>Real-time game database with API integration</li>
+                <li>Advanced search & filtering by platform/genre</li>
+                <li>Responsive card-based grid layout</li>
+                <li>Dynamic content loading and rendering</li>
+              </ul>
+            </div>
+            <div class="project-links">
+              <a href="https://trivinotmthy.github.io/WonderVault/" class="btn btn-primary btn-sm" target="_blank">
+                <i class="fas fa-external-link-alt"></i> View Live
+              </a>
+              <a href="https://github.com/TRIVINOTMTHY/WonderVault" class="btn btn-outline btn-sm" target="_blank">
+                <i class="fab fa-github"></i> Source Code
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  
+
+
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section cta-section">
+    <div class="container">
+      <h2>Like what you <em style="font-style:italic;color:var(--crimson-bright)">see?</em></h2>
+      <p>Let's discuss how I can bring your next web project to life.</p>
+      <div class="cta-actions">
+        <a href="contact.html" class="btn btn-primary btn-large">
+          <i class="fas fa-envelope"></i> Get In Touch
+        </a>
+        <a href="about.html" class="btn btn-outline btn-large">
+          <i class="fas fa-user"></i> About Me
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-brand-name">Dainiel Timothy<span>Triviño</span></div>
+          <p>Web Developer passionate about creating beautiful and functional web experiences based in Pampanga, Philippines.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <div class="footer-social">
+            <a href="https://www.linkedin.com/in/dainiel-timothy-trivino-508b88357/" class="footer-social-icon" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/TRIVINOTMTHY" class="footer-social-icon" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.facebook.com/danieltimothy.trivino/" class="footer-social-icon" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="mailto:trivinodainieltimothy@gmail.com" class="footer-social-icon"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Dainiel Timothy S. Triviño. All rights reserved.</p>
+        <div class="footer-bottom-right">Built with <span>♥</span> &amp; HTML / CSS / JS</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

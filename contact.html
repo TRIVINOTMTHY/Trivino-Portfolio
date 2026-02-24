@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Dainiel Timothy S. Triviño — Get in touch for web development projects and collaborations.">
+  <title>Contact | Dainiel Triviño</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- LOADER -->
+  <div class="loader" id="loader">
+    <div class="loader-logo">DT</div>
+    <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+  </div>
+
+  <!-- NAVIGATION -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <img src="images/logo.png" alt="Dainiel Triviño" class="logo-img"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+        <span style="display:none">D<span>T</span></span>
+      </a>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html" class="nav-link"><span class="nav-number">01.</span> Home</a></li>
+        <li><a href="about.html" class="nav-link"><span class="nav-number">02.</span> About</a></li>
+        <li><a href="projects.html" class="nav-link"><span class="nav-number">03.</span> Projects</a></li>
+        <li><a href="contact.html" class="nav-link active"><span class="nav-number">04.</span> Contact</a></li>
+      </ul>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <section class="page-header">
+    <div class="page-header-bg"></div>
+    <div class="page-header-inner">
+      <span class="page-header-eyebrow">04 — Contact</span>
+      <h1>Let's build<br><em>something great</em></h1>
+      <p>Open to internship opportunities, freelance projects, and creative collaborations.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- Info Card -->
+        <div class="contact-info-card reveal-left">
+          <h2>Contact Info</h2>
+          <p>Feel free to reach out through any of the following channels. I'm always open to new opportunities and conversations.</p>
+
+          <div class="contact-methods">
+            <div class="contact-method">
+              <div class="contact-method-icon"><i class="fas fa-envelope"></i></div>
+              <div>
+                <span class="contact-method-label">Email</span>
+                <div class="contact-method-value">
+                  <a href="mailto:trivinodainieltimothy@gmail.com">trivinodainieltimothy@gmail.com</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-method">
+              <div class="contact-method-icon"><i class="fas fa-phone"></i></div>
+              <div>
+                <span class="contact-method-label">Phone</span>
+                <div class="contact-method-value">
+                  <a href="tel:+639501317443">+63 950 131 7443</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-method">
+              <div class="contact-method-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div>
+                <span class="contact-method-label">Location</span>
+                <div class="contact-method-value">Xevera Bacolor, Pampanga, Philippines</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="social-row">
+            <a href="https://www.linkedin.com/in/dainiel-timothy-trivino-508b88357/" class="social-pill" target="_blank">
+              <i class="fab fa-linkedin-in"></i> LinkedIn
+            </a>
+            <a href="https://github.com/TRIVINOTMTHY" class="social-pill" target="_blank">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="https://www.facebook.com/danieltimothy.trivino/" class="social-pill" target="_blank">
+              <i class="fab fa-facebook-f"></i> Facebook
+            </a>
+          </div>
+
+                    <div class="resume-cta-box">
+            <h3>
+                <i class="fas fa-file-pdf" style="color:var(--crimson-bright);margin-right:8px"></i>
+                Download Resume
+            </h3>
+            <p>Get a copy of my resume in PDF format.</p>
+            <a href="assets/Trivino_MIDTERM REQUIREMENT.pdf" class="btn btn-primary btn-sm" download>
+                <i class="fas fa-download"></i> Download CV / Resume
+            </a>
+</div>
+
+        </div>
+
+        <!-- Form -->
+        <div class="contact-form-wrapper reveal-right">
+          <h2>Send a Message</h2>
+          <p>Have a project in mind or just want to say hi? Fill out the form below and I'll get back to you as soon as possible.</p>
+
+          <form class="contact-form" id="contactForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name"><i class="fas fa-user"></i> Full Name *</label>
+                <input type="text" id="name" name="name" placeholder="Timothy Trivino" required>
+              </div>
+              <div class="form-group">
+                <label for="email"><i class="fas fa-envelope"></i> Email Address *</label>
+                <input type="email" id="email" name="email" placeholder="Timothytrivino@example.com" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="subject"><i class="fas fa-tag"></i> Subject *</label>
+              <input type="text" id="subject" name="subject" placeholder="Project Inquiry" required>
+            </div>
+
+            <div class="form-group">
+              <label for="message"><i class="fas fa-comment-alt"></i> Message *</label>
+              <textarea id="message" name="message" rows="6" placeholder="Tell me about your project, idea, or opportunity..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-large" style="width:100%;justify-content:center">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+          </form>
+
+          <div class="form-message" id="formMessage"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- MAP -->
+  <section class="section map-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Location</div>
+        <h2 class="section-title">Find Me <em>Here</em></h2>
+      </div>
+      <div class="map-box reveal">
+        <div class="map-box-grid"></div>
+        <div class="map-box-content">
+          <i class="fas fa-map-pin"></i>
+          <h3>Xevera Bacolor</h3>
+          <p>Pampanga, Philippines</p>
+          <a href="https://maps.google.com/?q=Bacolor+Pampanga+Philippines" target="_blank" class="btn btn-outline btn-sm" style="margin-top:8px">
+            <i class="fas fa-directions"></i> Open in Maps
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-brand-name">Dainiel Timothy <span>Triviño</span></div>
+          <p>Web Developer passionate about creating beautiful and functional web experiences based in Pampanga, Philippines.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <div class="footer-social">
+            <a href="https://www.linkedin.com/in/dainiel-timothy-trivino-508b88357/" class="footer-social-icon" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/TRIVINOTMTHY" class="footer-social-icon" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.facebook.com/danieltimothy.trivino/" class="footer-social-icon" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://mail.google.com/mail/u/0/#inbox?compose=VpCqJZMhTPwrVpbbqjgTLXGqFnbQtqZtgQsFFLWcBNMsRMjXXrrcxkpHqtbqSLvFfDFZGPv" class="footer-social-icon"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Dainiel Timothy S. Triviño. All rights reserved.</p>
+        <div class="footer-bottom-right">Built with <span>♥</span> &amp; HTML / CSS / JS</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
